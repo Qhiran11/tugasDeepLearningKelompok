@@ -2,38 +2,38 @@ Ablation Study Results
 ========================
 
 Model: 1x Conv + RELU
- - Waktu Training (10 Epochs): 5.90 detik
- - Train Akurasi: 82.05%
- - Test Akurasi: 84.07%
- - Confusion Matrix: TP=76, TN=114, FP=1, FN=35
+ - Waktu Training (10 Epochs): 5.48 detik
+ - Train Akurasi: 58.56%
+ - Test Akurasi: 58.41%
+ - Confusion Matrix: TP=25, TN=107, FP=8, FN=86
 
 Model: 2x Conv + RELU
- - Waktu Training (10 Epochs): 8.30 detik
- - Train Akurasi: 69.46%
- - Test Akurasi: 71.68%
- - Confusion Matrix: TP=103, TN=59, FP=56, FN=8
+ - Waktu Training (10 Epochs): 8.54 detik
+ - Train Akurasi: 66.44%
+ - Test Akurasi: 65.93%
+ - Confusion Matrix: TP=105, TN=44, FP=71, FN=6
 
 Model: 3x Conv + RELU
- - Waktu Training (10 Epochs): 9.68 detik
+ - Waktu Training (10 Epochs): 10.26 detik
  - Train Akurasi: 51.17%
  - Test Akurasi: 50.88%
  - Confusion Matrix: TP=0, TN=115, FP=0, FN=111
 
 Model: 1x Conv + SIGMOID
- - Waktu Training (10 Epochs): 6.92 detik
+ - Waktu Training (10 Epochs): 12.65 detik
+ - Train Akurasi: 57.55%
+ - Test Akurasi: 56.19%
+ - Confusion Matrix: TP=22, TN=105, FP=10, FN=89
+
+Model: 2x Conv + SIGMOID
+ - Waktu Training (10 Epochs): 19.77 detik
  - Train Akurasi: 51.17%
  - Test Akurasi: 50.88%
  - Confusion Matrix: TP=0, TN=115, FP=0, FN=111
 
-Model: 2x Conv + SIGMOID
- - Waktu Training (10 Epochs): 10.25 detik
- - Train Akurasi: 51.68%
- - Test Akurasi: 50.88%
- - Confusion Matrix: TP=111, TN=4, FP=111, FN=0
-
 Model: 3x Conv + SIGMOID
- - Waktu Training (10 Epochs): 11.55 detik
- - Train Akurasi: 48.83%
- - Test Akurasi: 49.12%
- - Confusion Matrix: TP=111, TN=0, FP=115, FN=0
+ - Waktu Training (10 Epochs): 18.81 detik
+ - Train Akurasi: 51.17%
+ - Test Akurasi: 50.88%
+ - Confusion Matrix: TP=0, TN=115, FP=0, FN=111
 

@@ -81,12 +81,35 @@ def evaluate_model(layers, X, y):
     predictions = (output > 0.5).astype(int)
     accuracy = np.mean(predictions == y)
 
+    # Confusion Matrix
     tp = np.sum((predictions == 1) & (y == 1))
     tn = np.sum((predictions == 0) & (y == 0))
     fp = np.sum((predictions == 1) & (y == 0))
     fn = np.sum((predictions == 0) & (y == 1))
 
     return accuracy, (tp, tn, fp, fn)
+
+
+def confusion_matrix_fathir(layers, X, y):
+    # Fungsi manual dari Fathir (disesuaikan dengan list 'layers' kita)
+    # Ini bisa digunakan sebagai cadangan/alasan jika ditanya dosen.
+    TP, TN, FP, FN = 0, 0, 0, 0
+    for i in range(len(X)):
+        # Ambil satu sampel tapi pertahankan dimensi batch
+        out = X[i : i + 1]
+        for layer in layers:
+            out = layer.forward(out)
+        pred_label = 1 if out[0, 0] > 0.5 else 0
+        true_label = int(y[i, 0])
+        if pred_label == 1 and true_label == 1:
+            TP += 1
+        elif pred_label == 0 and true_label == 0:
+            TN += 1
+        elif pred_label == 1 and true_label == 0:
+            FP += 1
+        elif pred_label == 0 and true_label == 1:
+            FN += 1
+    return np.array([[TP, FP], [FN, TN]])
 
 
 if __name__ == "__main__":
